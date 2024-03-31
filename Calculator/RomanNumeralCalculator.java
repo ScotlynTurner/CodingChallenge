@@ -5,6 +5,13 @@ public class RomanNumeralCalculator {
 
   public RomanNumeralCalculator() {}
 
+  /**
+   * This function is the main access for the calculator. It iterates over each digit in decimalValue and adds the result
+   * to romNumValue.
+   *
+   * @param decimalValue
+   * @return romNumValue
+   */
   public String decToRomNum(int decimalValue) {
     if (decimalValue < 0) {
       throw new IllegalArgumentException("Unable to convert negative numbers");
@@ -24,6 +31,12 @@ public class RomanNumeralCalculator {
     return romNumValue;
   }
 
+  /**
+   * Determines what calculations are needed based on the digit value.
+   *
+   * @param value
+   * @return conversion
+   */
   private String convert(int value) {
     String conversion = "";
     if (value < 4) {
@@ -35,7 +48,7 @@ public class RomanNumeralCalculator {
     } else if (value > 5 && value < 9) {
       conversion += placeValue;
       for (int i = 0; i < (value - 5); i++) {
-        conversion += addLower();
+        conversion += lower();
       }
     } else {
       conversion += placeValue;
@@ -44,6 +57,9 @@ public class RomanNumeralCalculator {
     return conversion;
   }
 
+  /**
+   * @return result of subtracting one from the current placeValue
+   */
   private String subOne() {
     switch (placeValue) {
       case 'I':
@@ -63,7 +79,10 @@ public class RomanNumeralCalculator {
     }
   }
 
-  private char addLower() {
+  /**
+   * @return the letter value one below the current placeValue
+   */
+  private char lower() {
     switch (placeValue) {
       case 'V':
         return 'I';
@@ -82,6 +101,12 @@ public class RomanNumeralCalculator {
     }
   }
 
+  /**
+   * Assigns placeValue to the letter corresponding to the place of the digit furthest left of value
+   *
+   * @param value
+   * @return the digit furthest left of the value
+   */
   private int furthestPlace(int value) {
     if (value > 3999) {
       throw new IllegalArgumentException("Unable to calculate numbers larger than 3999");
@@ -113,6 +138,12 @@ public class RomanNumeralCalculator {
     }
   }
 
+  /**
+   * Removes the furthest digit to the left of value
+   *
+   * @param value
+   * @return the new value
+   */
   private int removeFurthest(int value) {
     String stringValue = String.valueOf(value);
     String newStringValue = stringValue.substring(1);
