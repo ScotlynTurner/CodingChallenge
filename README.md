@@ -4,7 +4,8 @@ Decimal to Roman Numeral Converter
 ## Process
 I started this project by brainstorming how this kind of converter would work. By putting the rules of Roman Numerals into an algorithm, I could insure that it would work for any integer given.
 
-![brainstorming notes](IMG_5122.heic)
+<img width="400" alt="brainstorming notes" src="https://github.com/ScotlynTurner/CodingChallenge/assets/144388353/682c5b36-6d56-4758-acb1-1006fd6348c1">
+
 
 Then, I crerated the functions I would need and started putting the algorithm together in code. I also made a test file to make sure everything worked properly, fixing bugs along the way.
 
