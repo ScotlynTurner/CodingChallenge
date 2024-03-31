@@ -10,7 +10,7 @@ public class RomanNumeralCalculator {
    * to romNumValue.
    *
    * @param decimalValue
-   * @return romNumValue
+   * @return the Roman Numeral conversion
    */
   public String decToRomNum(int decimalValue) {
     if (decimalValue < 0) {
@@ -35,7 +35,7 @@ public class RomanNumeralCalculator {
    * Determines what calculations are needed based on the digit value.
    *
    * @param value
-   * @return conversion
+   * @return conversion of the digit value
    */
   private String convert(int value) {
     String conversion = "";
