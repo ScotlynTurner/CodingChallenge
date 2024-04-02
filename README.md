@@ -17,10 +17,10 @@ After I made sure everything was in order, I committed my final version to GitHu
 ## Comments
 ### Time Spent:
 - **Brainstorm and Planning** - 20 minutes
-- **Programming** - 2 hr minutes
+- **Programming** - 2 hr
 - **Testing** - 30 minutes
 - **Commenting** - 10 minutes
 
-**Total Approximate Time** - 3 hr minutes
+**Total Approximate Time** - 3 hr
 
 Overall, I really enjoyed this challlenge! 10/10 would recommend
